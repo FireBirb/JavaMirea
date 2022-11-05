@@ -1,7 +1,5 @@
 package ru.mirea.task15.taskStep1;
 
-import ru.mirea.task5.taskStep1.Window;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -81,7 +79,7 @@ public class Calculator {
                     double res = n1+n2;
                     JOptionPane.showMessageDialog(null, "Result = "+res,"Alert",JOptionPane.INFORMATION_MESSAGE);
                 } catch (Exception er){
-                    JOptionPane.showMessageDialog( null, "Error in Numbers !","alert" , JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog( null, "Error in Numbers!","alert" , JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
@@ -95,7 +93,7 @@ public class Calculator {
                     double res = n1-n2;
                     JOptionPane.showMessageDialog(null, "Result = "+res,"Alert",JOptionPane.INFORMATION_MESSAGE);
                 } catch (Exception er){
-                    JOptionPane.showMessageDialog( null, "Error in Numbers !","alert" , JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog( null, "Error in Numbers!","alert" , JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
@@ -107,9 +105,9 @@ public class Calculator {
                     double n1 = Double.parseDouble(num1.getText().trim());
                     double n2 = Double.parseDouble(num2.getText().trim());
                     double res = n1*n2;
-                    JOptionPane.showMessageDialog(null, "Result = "+res,"Alert",JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Result = " + res, "Alert", JOptionPane.INFORMATION_MESSAGE);
                 } catch (Exception er){
-                    JOptionPane.showMessageDialog( null, "Error in Numbers !","alert" , JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog( null, "Error in Numbers!","alert" , JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
@@ -120,10 +118,14 @@ public class Calculator {
                 try {
                     double n1 = Double.parseDouble(num1.getText().trim());
                     double n2 = Double.parseDouble(num2.getText().trim());
-                    double res = n1/n2;
-                    JOptionPane.showMessageDialog(null, "Result = "+res,"Alert",JOptionPane.INFORMATION_MESSAGE);
+                    if (n2 == 0) {
+                        JOptionPane.showMessageDialog( null, "Error in Numbers!","alert" , JOptionPane.ERROR_MESSAGE);
+                    } else {
+                        double res = n1/n2;
+                        JOptionPane.showMessageDialog(null, "Result = " + res, "Alert", JOptionPane.INFORMATION_MESSAGE);
+                    }
                 } catch (Exception er){
-                    JOptionPane.showMessageDialog( null, "Error in Numbers !","alert" , JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog( null, "Error in Numbers!","alert" , JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
