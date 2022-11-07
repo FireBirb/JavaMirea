@@ -11,12 +11,12 @@ public class Test {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        String re = "(((0[1-9]|[12][0-9]|3[01])/(0[13578]|1[02]))|((0[1-9]|[12][0-9]|30)/(0[469]|11))|((0[1-9]|[1][0-9]|2[0-8])/02))/([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})|(29/02/(([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00)))";
-        Pattern p = Pattern.compile("re");
+        String re = "(((0[1-9]|[12][0-9]|3[01])/(0[13578]|1[02]))|((0[1-9]|[12][0-9]|30)/(0[469]|11))|((0[1-9]|1[0-9]|2[0-8])/02))/(19[0-9]{2}|[2-9][0-9]{3})|(29/02/((19|[2-9][0-9])(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00)))";
+        Pattern p = Pattern.compile(re);
         Calendar curCal = Calendar.getInstance(), cal = Calendar.getInstance();
         System.out.println("The date in dd/mm/yyyy format");
         String sCal = scanner.nextLine();
-        while (!p.matcher(sCal).matches()) {
+        if (!p.matcher(sCal).find()) {
             System.out.println("Wrong date, try again");
             sCal = scanner.nextLine();
         }

@@ -14,9 +14,9 @@ public class Calculator {
     JButton div = new JButton("/");
     JButton mult = new JButton("*");
     JLabel jl1 = new JLabel("Number 1:");
-    JLabel jl2 = new JLabel("Number 2");
-    JTextField num1 = new JTextField(10);
-    JTextField num2 = new JTextField(10);
+    JLabel jl2 = new JLabel("Number 2:");
+    JTextField num1 = new JTextField();
+    JTextField num2 = new JTextField();
     public Calculator() {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new GridBagLayout());
@@ -36,7 +36,9 @@ public class Calculator {
         c.gridwidth = 3;
         frame.add(num1, c);
         c.insets = new Insets(0, 10, 0, 0);
+        c.ipady = 10;
         c.weightx = 0.3;
+        c.weighty = 0.5;
         c.gridx = 0;
         c.gridy = 1;
         frame.add(jl2, c);
@@ -79,7 +81,7 @@ public class Calculator {
                     double res = n1+n2;
                     JOptionPane.showMessageDialog(null, "Result = "+res,"Alert",JOptionPane.INFORMATION_MESSAGE);
                 } catch (Exception er){
-                    JOptionPane.showMessageDialog( null, "Error in Numbers!","alert" , JOptionPane.ERROR_MESSAGE);
+                    Err();
                 }
             }
         });
@@ -93,7 +95,7 @@ public class Calculator {
                     double res = n1-n2;
                     JOptionPane.showMessageDialog(null, "Result = "+res,"Alert",JOptionPane.INFORMATION_MESSAGE);
                 } catch (Exception er){
-                    JOptionPane.showMessageDialog( null, "Error in Numbers!","alert" , JOptionPane.ERROR_MESSAGE);
+                    Err();
                 }
             }
         });
@@ -107,7 +109,7 @@ public class Calculator {
                     double res = n1*n2;
                     JOptionPane.showMessageDialog(null, "Result = " + res, "Alert", JOptionPane.INFORMATION_MESSAGE);
                 } catch (Exception er){
-                    JOptionPane.showMessageDialog( null, "Error in Numbers!","alert" , JOptionPane.ERROR_MESSAGE);
+                    Err();
                 }
             }
         });
@@ -119,18 +121,21 @@ public class Calculator {
                     double n1 = Double.parseDouble(num1.getText().trim());
                     double n2 = Double.parseDouble(num2.getText().trim());
                     if (n2 == 0) {
-                        JOptionPane.showMessageDialog( null, "Error in Numbers!","alert" , JOptionPane.ERROR_MESSAGE);
+                        Err();
                     } else {
                         double res = n1/n2;
                         JOptionPane.showMessageDialog(null, "Result = " + res, "Alert", JOptionPane.INFORMATION_MESSAGE);
                     }
                 } catch (Exception er){
-                    JOptionPane.showMessageDialog( null, "Error in Numbers!","alert" , JOptionPane.ERROR_MESSAGE);
+                    Err();
                 }
             }
         });
         frame.setSize(new Dimension(500, 700));
         frame.setVisible(true);
+    }
+    public void Err() {
+        JOptionPane.showMessageDialog( null, "Error in Numbers!","alert" , JOptionPane.ERROR_MESSAGE);
     }
 
     public static void main(String[] args) {
