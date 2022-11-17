@@ -1,6 +1,6 @@
 package ru.mirea.task10.taskStep2;
 
-import ru.mirea.task10.student.Student;
+import ru.mirea.task10.taskStep1.Student;
 
 public class QuickSort {
     public static void SortStudent(Student[] array, int low, int high) {

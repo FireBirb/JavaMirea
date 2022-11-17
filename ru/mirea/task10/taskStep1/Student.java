@@ -1,4 +1,4 @@
-package ru.mirea.task10.student;
+package ru.mirea.task10.taskStep1;
 
 public class Student {
     private String name, surname, specialty, group;
