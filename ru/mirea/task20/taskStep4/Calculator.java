@@ -14,7 +14,7 @@ public final class Calculator {
     {
         return x1.doubleValue() / x2.doubleValue();
     }
-    public static <N extends Number> double subtraction(N x1, N x2)
+    public static <N extends Number> double subtract(N x1, N x2)
     {
         return x1.doubleValue() - x2.doubleValue();
     }

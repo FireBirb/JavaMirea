@@ -27,12 +27,12 @@ public class Game {
             public void actionPerformed(ActionEvent e) {
                 int answ = Integer.parseInt(answField.getText());
                 if (answ == num) {
-                    JOptionPane.showMessageDialog(null, "Вы угадали!","Alert",JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Вы угадали!","Alert", JOptionPane.INFORMATION_MESSAGE);
                     exit(0);
                 }
                 tries++;
                 if (tries == 3) {
-                    JOptionPane.showMessageDialog(null, "Попытки закончились, вы не смогли угадать. Правильный ответ: ","Alert",JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Попытки закончились, вы не смогли угадать. Правильный ответ: ","Alert", JOptionPane.INFORMATION_MESSAGE);
                     exit(0);
                 }
                 else {

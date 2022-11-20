@@ -13,6 +13,6 @@ public class Test {
         System.out.println(Calculator.sum(1, 0.5));
         System.out.println(Calculator.divide(1, 0.5));
         System.out.println(Calculator.multiply(1, 0.5));
-        System.out.println(Calculator.subtraction(1, 0.5));
+        System.out.println(Calculator.subtract(1, 0.5));
     }
 }
