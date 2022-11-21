@@ -1,7 +1,7 @@
 package ru.mirea.task21.taskStep2to4;
 
 public class Arr <T>{
-    T[] arr;
+    private T[] arr;
     Arr (T[] arr) {
         this.arr = arr;
     }
