@@ -5,5 +5,6 @@ public class Test {
     {
         ThrowsDemo throwsDemo = new ThrowsDemo();
         throwsDemo.printMessage("1");
+        throwsDemo.printMessage(null);
     }
 }

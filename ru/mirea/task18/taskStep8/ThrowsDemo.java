@@ -8,6 +8,9 @@ public class ThrowsDemo {
         String key = myScanner.next();
         printDetails(key);
     }
+    public void getKey(String key) throws Exception {
+        printDetails(key);
+    }
     public void printDetails(String key) throws Exception {
         try
         {

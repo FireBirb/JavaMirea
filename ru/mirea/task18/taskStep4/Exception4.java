@@ -6,10 +6,10 @@ public class Exception4 {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
         System.out.print("Enter an integer ");
-        String intString = myScanner.next();
+        String s = myScanner.nextLine();
         int i = 1;
         try {
-            i = Integer.parseInt(intString);
+            i = Integer.parseInt(s);
             try {
                 System.out.println( 2/i );
             } catch (ArithmeticException e) {
